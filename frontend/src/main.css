@@ -1,0 +1,215 @@
+/* Importar Bootstrap */
+@import url('bootstrap/dist/css/bootstrap.min.css');
+
+/* Variables CSS personalizadas para el tema de tarot */
+:root {
+  --primary-color: #4a1a4a;
+  --secondary-color: #8b4a8b;
+  --accent-color: #d4af37;
+  --dark-color: #2d1b2d;
+  --light-color: #f8f9fa;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Estilos globales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  line-height: 1.6;
+}
+
+/* Estilos para botones personalizados */
+.btn-primary {
+  background: var(--gradient);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--gradient);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Estilos para cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
+}
+
+.card-header {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+/* Estilos para el navbar */
+.navbar-custom {
+  background: var(--gradient);
+  box-shadow: var(--shadow);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Estilos para formularios */
+.form-control {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgb(74 26 74 / 25%);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+/* Estilos para badges */
+.badge {
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background: var(--gradient);
+}
+
+/* Estilos para alertas personalizadas */
+.alert {
+  border: none;
+  border-radius: 8px;
+  padding: 15px 20px;
+}
+
+/* Estilos para el carrito */
+.cart-badge {
+  background: var(--accent-color);
+  color: var(--dark-color);
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para productos */
+.product-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+.product-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.product-price {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Estilos para el footer */
+.footer {
+  background: var(--dark-color);
+  color: white;
+  padding: 40px 0 20px;
+  margin-top: auto;
+}
+
+/* Utilidades */
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.bg-gradient-custom {
+  background: var(--gradient) !important;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive */
+@media (width <= 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
